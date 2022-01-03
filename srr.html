@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*Universal box-sizing for all elements*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Exo', sans-serif;
+    background-color: #94b8b8;
+}
+
+
+/*style header-----------------------------*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #669999;
+}
+
+.overlay {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.overlay-content a, .openbtn, .closebtn {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.overlay-content a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.overlay-content a:hover {
+    color: #444444;
+    background-color: #fff;
+}
+
+.openbtn {
+    display: none;
+    float: right;
+}
+
+.closebtn {
+    display: none;
+    font-family: 'Kaushan Script', cursive;
+}
+
+
+/*style main---------------------------------*/
+main, footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 49px;
+}
+
+#image {
+    background-color: #000000;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    color: #ffffff;
+}
+
+#title {
+    font-size: 25px;
+    font-family: 'Kaushan Script', cursive;
+    margin-bottom: 0px;
+
+}
+
+#img-caption {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+
+/*style biography section-------------------------*/
+/* all h2 in the document */
+h2 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#biography, #awards {
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+#biography, #filmography, #awards {
+    display: flex;
+    flex-direction: column;
+    padding-top: 65px;
+}
+
+#tribute-info, #movies, .poster, #row, #info {
+    display: flex;
+    flex-direction: row;
+}
+
+#tribute-info, #movies {
+    justify-content: center;
+    align-items: center;
+    padding: 0 90px 40px 90px;
+}
+
+
+#tribute-info img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+#tribute-info p {
+    width: 800px;
+    line-height: 1.8;
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+/*style filmography-------------------------------*/
+
+#movies-left, #movies-right, .award {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#movies-left, #movies-right {
+    justify-content: center;
+    width: 488px;
+    padding: 20px;
+    margin: 18px 0;
+}
+
+.poster {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px 10px;
+    border-radius: 12px;
+    border: 4px dotted grey;
+    box-shadow: 5px 10px 14px rgba(81, 82, 82, 0.4);
+    width: 428px;
+}
+
+.poster img, .award img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    border: 1px solid #cccccc;
+}
+
+.poster ul {
+    padding-left: 30px;
+}
+
+
+/* style awards section ----------------------------*/
+
+#row {
+    justify-content: space-around;
+    margin: 20px 60px;
+    padding-bottom: 40px;
+}
+
+.award {
+    width: 250px;
+    padding: 20px;
+    background-color: #94b8b8;
+    border-radius: 12px;
+    box-shadow: 5px 10px 14px rgba(81, 82, 82, 0.4);
+    margin: 38px 0;
+}
+
+.award p {
+    margin: 10px 0;
+}
+
+.award p:first-of-type {
+    margin-top: 30px;
+}
+
+
+/* style info section -----------------------------*/
+
+#info {
+    padding: 12px 0;
+}
+
+.logo {
+    margin: 0 15px;
+}
+
+/* style footer ----------------------------------*/
+
+footer {
+    background-color: #3d5c5c;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    color: #c7c406;
+}
+
+/* media queries for devices with small screens-----------*/
+
+@media screen and (max-width: 500px) {
+
+    /* style navigation bar for small devices -----*/
+    .openbtn {
+        display: block;
+        font-size: 22px;
+        color: #fff;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #d8d4d4;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        font-size: 60px;
+    }
+
+    /* improve hero image position ------------------*/
+
+    .text {
+        top: .1%;
+        padding-right: 45%;
+    }
+
+    #title {
+        font-size: 25px;
+    }
+
+    #img-caption {
+        font-size: 14px;
+    }
+
+    /* in columns for small devices and reduce width to 360px for Galaxy mobile shorter than iphone---*/
+
+    #tribute-info, #movies, #row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0px;
+    }
+
+    #tribute-info, #tribute-info p, #movies,
+    #movies-left, #movies-right {
+        width: 360px;
+    }
+
+    #movies-left, #movies-right {
+        margin: 0;
+        padding: 0;
+    }
+
+    .poster {
+        width: 330px;
+        padding: 10px;
+        margin: 25px 10px;
+
+    }
+
+    #row {
+        margin: 0;
+    }
+
+    .award {
+        width: 330px;
+        padding: 35px;
+        margin: 25px 10px;
+    }
+
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <span class="openbtn" onclick="openNav()">&#9776; </span>
+        <nav id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="#home">Home</a>
+                <a href="#biography">Biography</a>
+                <a href="#filmography">Filmography</a>
+                <a href="#awards">Awards</a>
+                <a href="#info">More Info</a>
+            </div>
+        </nav>
+    </header>
+    <!-- main information -->
+    <main id="home">
+        <!-- Hero image -->
+        <section id="img-div">
+            <img id="image" src="https://i.imgur.com/p4BbCLc.jpg" alt="Sushant's image">
+            <div class="text">
+                <h1 id="title">Sushant Singh Rajput</h1>
+                <p id="img-caption">We miss you Captain</p>
+            </div>
+        </section>
+        <!-- Biography information -->
+        <section id="biography">
+            <h2>Biography</h2>
+            <div id="tribute-info">
+                <img src="https://i.imgur.com/y34Y2oH.jpg" alt="Sushant's image">
+                <p> Sushant Singh Rajput was born on January 21, 1986, to Krishna Kumar Singh and Usha Singh, in Purnia, Bihar. He did his schooling from St. Karen's High School
+                    in Patna and then from Kulachi Hansraj Model School in New Delhi. Sushant Singh Rajput was good at studies and cleared 11 engineering entrance
+                    examinations in his entire life. In 2003, he secured the seventh rank in the Delhi College of Engineering Entrance Exam and got admitted in B.E.
+                    Mechanical Engineering. Sushant was also a National Olympiad Winner in Physics. At Delhi College of Engineering, he actively participated in theatre.
+                    He drops out of college to pursue his acting career.  <a id="tribute-link1" href="https://en.wikipedia.org/wiki/Sushant_Singh_Rajput" title="Sushant Singh Biography" target="_blank">More about Sushant Singh...</a></p>
+            </div>
+        </section>
+        <!-- Filmography information -->
+        <section id="filmography">
+            <h2>Most outstanding movies</h2>
+            <div id="movies">
+                <div id="movies-left">
+                    <div class="poster">
+                        <img src="https://images.herzindagi.info/image/2021/Jan/Chhichhore.jpg" alt="Chhichhore" >
+                        <ul>
+                            <li>2019</li>
+                            <li><strong>Chhichhore</strong></li>
+                            <li>Director: Nitesh Tiwari</li>
+                            <li>Character: Anni</li>
+                        </ul>
+                    </div>
+                    <div class="poster">
+                        <img src="https://i.imgur.com/09DjoeM.jpg" alt="MS Dhoni: The Untold Story ">
+                        <ul>
+                            <li>2016</li>
+                            <li><strong>MS Dhoni: The Untold Story </strong></li>
+                            <li>Director: Neeraj Pandey</li>
+                            <li>Character: Mahendra Singh Dhoni</li>
+                        </ul>
+                    </div>
+                    <div class="poster">
+                        <img src="https://i.imgur.com/gOThCDP.jpg" alt="Kedarnath">
+                        <ul>
+                            <li>2018</li>
+                            <li><strong>Kedarnath</strong></li>
+                            <li>Director: Abhishek Kapoor</li>
+                            <li>Character: Mansoor Khan</li>
+                        </ul>
+                    </div>
+                    <div class="poster">
+                        <img src="https://images.herzindagi.info/image/2021/Jan/pk.jpg" alt="PK">
+                        <ul>
+                            <li>2014</li>
+                            <li><strong>PK</strong></li>
+                            <li>Director: Rajkumar Hirani</li>
+                            <li>Character: Sarfraz Yousuf</li>
+                        </ul>
+                    </div>
+    
+                </div>
+                <div id="movies-right">
+                    <div class="poster">
+                        <img src="https://images.herzindagi.info/image/2021/Jan/kai-po-che.jpg" alt="Kai Po Che">
+                        <ul>
+                            <li>2013</li>
+                            <li><strong>Kai Po Che</strong></li>
+                            <li>Director: Abhishek Kapoor</li>
+                            <li>Character: Ishaan Bhatt</li>
+                        </ul>
+                    </div>
+                    <div class="poster">
+                        <img src="https://i.imgur.com/jM6lo03.jpg" alt="Dil Bechara">
+                        <ul>
+                            <li>2020</li>
+                            <li><strong>Dil Bechara</strong></li>
+                            <li>Director: Mukesh Chhabra</li>
+                            <li>Character: Manny</li>
+                        </ul>
+                    </div>
+                    <div class="poster">
+                        <img src="https://i.imgur.com/V8E5blE.jpg" alt="Raabta ">
+                        <ul>
+                            <li>2017</li>
+                            <li><strong>Raabta </strong></li>
+                            <li>Director:Mukesh Chhabra </li>
+                            <li>Character: Shiv Kakkar</li>
+                        </ul>
+                    </div>
+                    <div class="poster">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/918C5X19poL._SL1500_.jpg" alt="Shuddh Desi Romance">
+                        <ul>
+                            <li>2013</li>
+                            <li><strong>Shuddh Desi Romance</strong></li>
+                            <li>Director: Maneesh Sharma</li>
+                            <li>Character: Raghu</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+        </section>
+        <!-- Awards information -->
+        <section id="awards">
+            <h2>Awards</h2>
+            <div id="row">
+                <div class="award">
+                    <img src="https://i.imgur.com/eeNl2Kk.jpg" alt="Boroplus Awards">
+                    <div class="award-text">
+                        <p>(2010) Best Actor - Popular
+                            Pavitra Rishta</p>
+                        <p>(2011) Best Actor - Popular
+                            Pavitra Rishta </p>
+                    </div>
+                </div>
+                <div class="award">
+                    <img src="https://i.imgur.com/Xk9spy8.jpg" alt="Golden Globe Awards">
+                    <div class="award-text">
+                        <p>(2017) Future of Fashion (Male)</p>
+                        <p>(2016)Youth Icon Of The Year (Male)</p>
+                    </div>
+                </div>
+                <div class="award">
+                    <img src="https://tvwish.com/img/program/488608.jpg" alt="Screen Awards">
+                    <div class="award-text">
+                        <p>(2011) Best Actor - Critics
+                            M.S. Dhoni: The Untold Story (2016)</p>
+                        <p>(2014)Most Promising Debut Actor
+                            Kai po che! (2013)</p>
+    
+                    </div>
+                </div>
+                <div class="award">
+                    <img src="https://i.imgur.com/Ai6cIGu.png" alt="GQ Awards">
+                    <div class="award-text">
+                        <p>(2015) Breakthrough Talent of the Year</p>
+    
+                    </div>
+                </div>
+            </div>
+    
+        </section>
+        <!-- More information in external links -->
+        <section id="info">
+            <div class="logo">
+                <a id="tribute-link" href="https://en.wikipedia.org/wiki/Sushant_Singh_Rajput" title="Sushant Singh Biography" target="_blank"><img src="https://img.icons8.com/windows/40/000000/wikipedia.png"></a>
+            </div>
+            <div class="logo">
+                <a href="https://www.instagram.com/sushantsinghrajput/?hl=en" title="Sushant Singh Instagram" target="_blank"><img src="https://img.icons8.com/nolan/40/000000/instagram-new.png"></i></a>
+            </div>
+            <div class="logo">
+                <a href="https://www.imdb.com/name/nm3818286/" title="Sushant Singh Rajput IMDb"><img src="https://img.icons8.com/color/40/000000/imdb.png"></a>
+            </div>
+           
+        </section>
+    </main>
+    <!-- Footer  -->
+    <footer>
+        <p>@ Adishi Sood</p>
+    </footer>
+     
+</body>
+</html>
